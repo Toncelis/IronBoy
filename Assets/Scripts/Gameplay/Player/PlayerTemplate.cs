@@ -19,8 +19,23 @@ namespace Game.PlayerV2
         [SerializeField]
         private float temperatureCap;
 
+        [SerializeField] private float overheatDamage;
+
+        [Header("Cooling")]
         [SerializeField]
         private float coolingTime;
+
+        [Space(4)]
+
+        [SerializeField]
+        private float idleCooling;
+
+        [SerializeField]
+        private float walkCooling;
+
+        [SerializeField]
+        private float runCooling;
+
 
         [Header("Energy")]
         [SerializeField]
@@ -28,24 +43,14 @@ namespace Game.PlayerV2
         [SerializeField]
         private float energyWasteSpeed;
 
-        [Header("Idle")]
-        [SerializeField]
-        private float idleCooling;
+        [Header("Movement")]
 
-        [Header("Walk")]
         [SerializeField]
         private float walkSpeed;
 
         [SerializeField]
-        private float walkCooling;
-
-        [Header("Run")]
-        [SerializeField]
         private float runSpeed;
-        [SerializeField]
-        private float runCooling;
 
-        [Header("Jump")]
         [SerializeField]
         private float jumpStrength;
 
@@ -59,13 +64,15 @@ namespace Game.PlayerV2
 
         [Header("Strong Attack")]
         [SerializeField]
-        private float strongAttackLength;
-        [SerializeField]
         private float strongAttackHeat;
         [SerializeField]
         private float strongAttackDamage;
         [SerializeField]
         private float strongAttackSpeedMultiplier;
+
+        [Header("Temp")]
+        [SerializeField]
+        private float strongAttackLength;
         #endregion
 
         #region access methods
@@ -74,6 +81,8 @@ namespace Game.PlayerV2
         public float TemperatureLevel3 => temperatureLevel3;
         public float TemperatureCap => temperatureCap;
         public float CoolingTime => coolingTime;
+
+        public float OverheatDamage => overheatDamage;
 
         public float Energy => energy;
         public float EnergyWasteSpeed => energyWasteSpeed;
@@ -94,11 +103,6 @@ namespace Game.PlayerV2
         public float StrongAttackLength => strongAttackLength;
         public float StrongAttackHeat => strongAttackHeat;
         public float StrongAttackDamage => strongAttackDamage;
-        #endregion
-
-        #region WIP_Deep
-        [SerializeField] private float overheatDamage;
-        public float OverheatDamage => overheatDamage;
         #endregion
 
         public void SaveDataToFile()
