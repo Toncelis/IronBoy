@@ -17,7 +17,7 @@ MonoBehaviour:
   runSpeed: 6
   attackDamage: 1
   attackSpeedModifier: 1
-  attackRange: 1
+  attackRange: 2
   attackHeight: 1
   idleDetectionRange: 1
   idleBackDetectionRange: 1

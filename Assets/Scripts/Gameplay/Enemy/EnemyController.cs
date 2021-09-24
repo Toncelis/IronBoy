@@ -63,7 +63,7 @@ namespace Game.Enemy
                 hitboxesStandartPosition.Add(hitbox.localPosition.x);
             }
 
-            vision.playerSpotted += SpotPlayer;
+            //vision.playerSpotted += SpotPlayer;
             StartIdling();
         }
 

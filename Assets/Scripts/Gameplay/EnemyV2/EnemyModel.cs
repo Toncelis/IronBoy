@@ -27,5 +27,7 @@ namespace Game.EnemyV2
         public float RunSpeed => template.RunSpeed * movementMultiplier;
         public float AttackSpeed => template.AttackSpeedModifier * attackSpeedMultiplier;
 
+        public float AttackRange => template.AttackRange;
+
     }
 }

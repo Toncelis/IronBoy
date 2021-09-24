@@ -12,7 +12,7 @@ namespace Game.Enemy
         [SerializeField]
         private Transform chasingVisionHitbox;
 
-        public delegate void SimpleEventHandler(Player.PlayerCondition playerCondition);
+        public delegate void SimpleEventHandler(Transform spottedTransform);//Player.PlayerCondition playerCondition);
 
         public event SimpleEventHandler playerSpotted;
 
@@ -25,11 +25,16 @@ namespace Game.Enemy
             return false;
         }
 
+        public Transform GetPlayer ()
+        {
+            return Physics2D.OverlapBox(visionHitbox.position, visionHitbox.lossyScale, 0, LayerMask.GetMask("Player")).transform;
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
-            { 
-                playerSpotted?.Invoke(collision.gameObject.GetComponent<Player.PlayerCondition>());
+            {
+                playerSpotted?.Invoke(collision.transform);//gameObject.GetComponent<Player.PlayerCondition>());
             } 
         }
 

@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 6334212239217319784}
   - component: {fileID: 6334212239217319787}
   - component: {fileID: 6123985638858687493}
+  - component: {fileID: 5139185026789259635}
   m_Layer: 3
   m_Name: vision
   m_TagString: Untagged
@@ -392,6 +393,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5139185026789259635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334212239217319781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed428b121abdeb44b3c8a3e8c107102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visionHitbox: {fileID: 6334212239217319786}
+  chasingVisionHitbox: {fileID: 2204837463869212137}
 --- !u!1 &6334212239536957762
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +642,11 @@ MonoBehaviour:
   directionIsRight: 0
   spriteRenderer: {fileID: 6334212240479731525}
   animator: {fileID: 6334212240479731530}
+  vision: {fileID: 5139185026789259635}
+  attackHitbox: {fileID: 6334212239819357567}
+  attackTriggerLength: 0.4
+  attackFullLength: 0.8
+  hitboxHolder: {fileID: 6334212239536957762}
 --- !u!114 &3381372520421978900
 MonoBehaviour:
   m_ObjectHideFlags: 0
